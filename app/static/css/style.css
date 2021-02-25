@@ -1,0 +1,14 @@
+header {
+  background-color: lightgreen;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 210px;
+}
+.grandpy-logo {
+  border-radius: 50%;
+  border: 5px solid white;
+  height: 170px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

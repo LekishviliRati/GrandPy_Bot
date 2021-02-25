@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  	<!-- A utiliser plus tard pour faire le lien avec CSS
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      -->
+    <link rel="stylesheet" href="interface_temporaire/style.css" />
+    <meta charset="utf-8">
+    <title>Papy Robot</title>
+  </head>
+  <body>
+  	<header>
+  		<img src="interface_temporaire/papy_robot.png" class="papy_robot_logo">
+  		<div class="inner-header">
+  			<h1> Papy Robot </h1>
+        <h2> Je connais pas mal d'adresses, tu n'as qu'à demander ! </h2>
+  		</div>
+  	</header>
+
+
+      <form class="user-form">
+      <p>
+        <input class="user-input" type="text" name="user-input" placeholder="Question"></input>
+        <div>
+          <input class="form_submit_button" type="submit" value="Rechercher"></input>
+          <div id="loading_circle"></div>
+        </div>
+      </p>
+    </form>
+
+  	<footer>
+  		<div class="inner-footer">
+  			<p> Rati Lekishvili </p>
+        <ul>
+          <li><a href="https://www.facebook.com"> FACEBOOK </a></li>
+          <li><a href="https://github.com/LekishviliRati"> GITHUB</a></li>
+          <li><a href="https://www.linkedin.com/in/rati-lekishvili-76a543111/">LINKED IN</a></li>
+        </ul>
+  		</div>
+  	</footer>
+  		
+  	
+  </body>
+</html>
