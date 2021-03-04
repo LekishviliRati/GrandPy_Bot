@@ -1,44 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
-  	<!-- A utiliser plus tard pour faire le lien avec CSS
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-      -->
-    <link rel="stylesheet" href="interface_temporaire/style.css" />
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Papy Robot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Link to style.css -->
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title> Granpa !</title>
+    <!-- Add GOOGLE MAPS -->
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Paris
+        const paris = { lat: 48.8534, lng: 2.3488 };
+        // The map, centered at Paris
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 6,
+          center: paris,
+        });
+        // The marker, positioned at Paris
+        const marker = new google.maps.Marker({
+          position: paris,
+          map: map,
+        });
+      }
+    </script>
+    <!-- Add GOOGLE MAPS -->
   </head>
+
   <body>
-  	<header>
-  		<img src="interface_temporaire/papy_robot.png" class="papy_robot_logo">
-  		<div class="inner-header">
-  			<h1> Papy Robot </h1>
-        <h2> Je connais pas mal d'adresses, tu n'as qu'à demander ! </h2>
-  		</div>
-  	</header>
+    <header id="conteneur_header">
+      <!-- <img src="img/papy_robot.png" alt="papy robot logo" class="papy_robot_logo"> -->
+      <img src="../static/img/papy_robot.png" alt="papy robot logo" class="papy">
+      <h1 class="element2"> <em> Papy Robot </em><br> Très fort en Géographie ! </h1>
+    </header>
 
+    <section id="form">
+      <form class="" action="index.html" method="post">
+        <label for="input"> Dis-moi tout ! Papy t'écoute attentivement 👴🏼: </label>
+        <p><input type="text" name="input" placeholder="Question ..." id="input_field"></p>
+        <button id="button" type="submit" class="button">
+          Rechercher </button>
+      </form>
+    </section>
 
-      <form class="user-form">
-      <p>
-        <input class="user-input" type="text" name="user-input" placeholder="Question"></input>
-        <div>
-          <input class="form_submit_button" type="submit" value="Rechercher"></input>
-          <div id="loading_circle"></div>
-        </div>
-      </p>
-    </form>
+    <section id="chat">
+      <p> Chat </p>
+      <!-- Add Google Map -->
+      <div id="map"></div>
+      <!-- Add Google Map -->
+    </section>
 
-  	<footer>
-  		<div class="inner-footer">
-  			<p> Rati Lekishvili </p>
-        <ul>
-          <li><a href="https://www.facebook.com"> FACEBOOK </a></li>
-          <li><a href="https://github.com/LekishviliRati"> GITHUB</a></li>
-          <li><a href="https://www.linkedin.com/in/rati-lekishvili-76a543111/">LINKED IN</a></li>
+    <footer>
+      <div>
+        <h2> Rati Lekishvili (DA Python) </h2>
+        <ul id="conteneur">
+          <li class="element 1"><a href="https://www.facebook.com/profile.php?id=100007066159331" title="Ajouter moi sur FACEBOOK !"> FACEBOOK </a></li>
+          <li class="element 2"><a href="https://github.com/LekishviliRati" title="Suis-moi sur GITHUB !"> GITHUB</a></li>
+          <li class="element 3"><a href="https://www.linkedin.com/in/rati-lekishvili-76a543111/" title="Mon Linked In">LINKED IN</a></li>
         </ul>
   		</div>
-  	</footer>
-  		
-  	
+    </footer>
+
+      <!-- Add GOOGLE MAPS -->
+       <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g&callback=initMap&libraries=&v=weekly"
+      async
+    >
+    </script>
+      <!-- Add GOOGLE MAPS -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
