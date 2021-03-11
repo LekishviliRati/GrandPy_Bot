@@ -24,6 +24,7 @@ h1{
   border-radius: 70% 70% 70% 70%;
   margin-bottom: 10px; /* Marge extérieur */
   margin-top: 20px; /* Marge extérieur */
+  box-shadow: 5px 5px 5px #91C3FF;
 }
 
 h2{
@@ -104,10 +105,12 @@ width: 100%;
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px;
+  height: 30em;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px #91C3FF;
 }
 
 /* Add Google Map */

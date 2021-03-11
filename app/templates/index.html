@@ -11,9 +11,11 @@
     <!-- Link to style.css -->
     <link rel="stylesheet" href="../static/css/style.css" />
     <title> Granpa !</title>
+
     <!-- Add GOOGLE MAPS -->
+    <!-- La map est intégré dans le champs "chat" lat et lng sont rentrés en dure -->
     <script>
-      // Initialize and add the map
+      // Initialize and add the map : Une fonction rédigée en "JavaScript" 
       function initMap() {
         // The location of Paris
         const paris = { lat: 48.8534, lng: 2.3488 };
@@ -30,6 +32,8 @@
       }
     </script>
     <!-- Add GOOGLE MAPS -->
+    <!-- Add GOOGLE MAPS -->
+
   </head>
 
   <body>
@@ -50,9 +54,13 @@
 
     <section id="chat">
       <p> Chat </p>
+
       <!-- Add Google Map -->
+      <!-- id="map" Est le repère de la fonction initMap() en JS pour placer la carte avec les dimensions définis en CSS -->
       <div id="map"></div>
       <!-- Add Google Map -->
+      <!-- Add Google Map -->
+
     </section>
 
     <footer>
@@ -67,9 +75,9 @@
     </footer>
 
       <!-- Add GOOGLE MAPS -->
-       <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g&callback=initMap&libraries=&v=weekly"
       async
     >
     </script>
