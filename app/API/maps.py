@@ -20,7 +20,6 @@ class map_request:
     try:
         def get_coordinates(self):
             search = "Openclassrooms"
-            API = "AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g"
             # os.environ['API_KEY']
             url = str("https://maps.googleapis.com/maps/api/place/textsearch"
                       "/json?query={}&key={}").format(search, API)
