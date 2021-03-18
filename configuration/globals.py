@@ -5,6 +5,15 @@ import os
 
 API_KEY = os.environ.get('API_KEY')
 
+"""
+Wikimedia 
+"""
+wiki_url = "https://fr.wikipedia.org/w/api.php?"
+# Lat | Lng of Roma
+wiki_test_lng = 12.4942
+wiki_test_lat = 41.8905
+
+
 """ 
 Input_parser
 """
