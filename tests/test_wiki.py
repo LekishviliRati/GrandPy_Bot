@@ -1,7 +1,7 @@
 """Test of wiki.py """
 
 import requests
-from app.API.wiki import wiki_request
+from API.wiki import wiki_request
 from configuration import wiki_test_lng, wiki_test_lat
 
 
@@ -28,7 +28,7 @@ def test_of_get_description_from_wiki_info_success(monkeypatch):
                     "pages": {
                         "239441": {
                             "pageid": 239441,
-                            "title": "Monkey Title",
+                            "title": "Monkey Title2",
                             "extract": "Monkey description",
                             "fullurl": "Monkey URL",
                         },
@@ -36,7 +36,7 @@ def test_of_get_description_from_wiki_info_success(monkeypatch):
                 },
             }
 
-    def mock_get_wiki_info(latitude, longitude):
+    def mock_get_wiki_infos(latitude, longitude):
         return MockResponse()
 
     expected_response = {
@@ -46,7 +46,7 @@ def test_of_get_description_from_wiki_info_success(monkeypatch):
     }
 
     # Apply the monkeypatch for requests.get to mock_get_coordinates
-    monkeypatch.setattr(requests, 'get', mock_get_wiki_info)
+    monkeypatch.setattr(requests, 'get', mock_get_wiki_infos)
     instance_of_wiki_request = wiki_request()
     test_request = instance_of_wiki_request.get_wiki_info(wiki_test_lat, wiki_test_lng)
     assert test_request == expected_response

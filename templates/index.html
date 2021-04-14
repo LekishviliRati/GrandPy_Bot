@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--	<script src="{{ url_for('static', filename='js/form.js') }}"></script>-->
+    <script src="../static/js/form.js"></script>
+    <script src="../static/js/map.js"></script>
+    <title> GrandPy 👴🏼 </title>
+</head>
+
+<body>
+<header id="conteneur_header">
+  <img src="../static/img/papy_robot.png" alt="papy robot logo" class="papy_image">
+  <h1 class="element2"> <em> Papy Robot </em><br> Très fort en Géographie ! </h1>
+</header>
+
+<div class="container">
+	<br>
+    <form>
+      <label> <strong>Dis-moi tout ! Papy t'écoute attentivement 👴🏼: </strong></label>
+      <p> <input type="text" name="input" placeholder="texte ..." id="nameInput"> </p>
+      <input type="submit" id="button" class="button" value=" Rechercher 🧐">
+    </form>
+	<br>
+
+</div>
+
+    <section id="chat">
+      <p id="chat_title"> CHAT </p>
+        <div id="successAlert" role="alert" style="display:none;"></div>
+        <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+    </section>
+
+    <div id="map"></div>
+
+
+    <footer>
+      <div>
+        <h2> Rati Lekishvili (DA Python) </h2>
+        <ul id="conteneur">
+          <li class="element 1"><a href="https://www.facebook.com" title="Ajouter moi sur FACEBOOK !"> FACEBOOK </a></li>
+          <li class="element 2"><a href="https://github.com/LekishviliRati" title="Suis-moi sur GITHUB !"> GITHUB</a></li>
+          <li class="element 3"><a href="https://www.linkedin.com/in/rati-lekishvili-76a543111/" title="Mon Linked In">LINKED IN</a></li>
+        </ul>
+  		</div>
+    </footer>
+
+      <!-- Add GOOGLE MAPS #############################################-->
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g&callback=initMap&libraries=&v=weekly"
+      async
+    >
+    </script>
+      <!-- Add GOOGLE MAPS #############################################-->
+
+</body>
+</html>
+

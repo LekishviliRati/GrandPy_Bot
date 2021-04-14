@@ -11,17 +11,17 @@ class map_request:
     """
     Comment.
     """
-
-    def __init__(self):
+    def __init__(self, input):
         self.latitude = None
         self.longitude = None
-        self.get_coordinates()
+        self.get_coordinates(input)
 
-    def get_coordinates(self):
+    def get_coordinates(self, input):
         search = "Lyon"
-        API = os.environ['API_KEY']
+        # API = os.environ['API_KEY']
+        API_KEY = "AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g"
         url = str("https://maps.googleapis.com/maps/api/place/textsearch"
-                  "/json?query={}&key={}").format(search, API)
+                  "/json?query={}&key={}").format(input, API_KEY)
 
         response = requests.get(url)
 
@@ -36,12 +36,14 @@ class map_request:
             return response.status_code, ''
 
 
-# """ test """
+# """ >> test """
 #
-# json_result = map_request()
+# input = "Exemple de ville"
 #
-# print("Latitude : ", json_result.latitude)
-# print("Longitude : ", json_result.longitude)
+# instance = map_request(input)
+#
+# print("Latitude : ", instance.latitude)
+# print("Longitude : ", instance.longitude)
 #
 #
-# """ test """
+# """ test << """

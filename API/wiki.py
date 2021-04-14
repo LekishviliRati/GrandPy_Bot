@@ -8,6 +8,10 @@ from configuration import wiki_url
 
 class wiki_request:
     """Comment."""
+    ## >> Ajouté à 17h30
+    def __init__(self, latitude, longitude):
+        self.get_wiki_info(latitude, longitude)
+    ## << Ajouté à 17h30
 
     def get_wiki_info(self, latitude, longitude):
         """Get information from wikimedia with lat|long."""
@@ -50,6 +54,6 @@ class wiki_request:
             return response.status_code, 'Not Found'
 
 
-# test = wiki_request()
+# test = wiki_request(45.764043, 4.835659)
 # print(test.get_wiki_info(45.764043, 4.835659))
 

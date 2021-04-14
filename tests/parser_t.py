@@ -2,9 +2,9 @@
 Test of Input_parser class.
 """
 
-from app.parser import Input_parser
+from API.parser import Input_parser
 
-input_1 = "Peux-tu, m'indiquer l'adresse d'openlassrooms ? "
+input_1 = " Peux-tu, m'indiquer l'adresse d'openlassrooms ? "
 input_2 = " Est-ce que tu connais l'addresse de la mairie de Paris ? "
 
 

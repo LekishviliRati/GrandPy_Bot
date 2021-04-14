@@ -1,7 +1,7 @@
 """Test of maps.py class."""
 
 import requests
-from app.API.maps import map_request
+from API.maps import map_request
 
 
 def test_get_location_coordinates_success(monkeypatch):
