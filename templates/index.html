@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" href="../static/css/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!--	<script src="{{ url_for('static', filename='js/form.js') }}"></script>-->
-    <script src="../static/js/form.js"></script>
+    <script src="../static/js/wiki_response.js"></script>
     <script src="../static/js/map.js"></script>
+    <script src="../static/js/chat.js"></script>
     <title> GrandPy 👴🏼 </title>
 </head>
 
@@ -35,7 +35,10 @@
 
     <section id="chat">
       <p id="chat_title"> CHAT </p>
-        <div id="successAlert" role="alert" style="display:none;"></div>
+<!--        <div id="successAlert" role="alert" style="display:none;"></div>-->
+        <div id="client-chat"> .. </div>
+        <div id="successAlert" style="display:none;"></div>
+<!--        <div class="papy-chat" >Hi ! </div>-->
         <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
     </section>
 

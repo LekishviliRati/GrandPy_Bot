@@ -120,3 +120,25 @@ ul, li{
 footer{
   background-color: ghostwhite;
 }
+
+#chat_title{
+    text-decoration: underline;
+}
+
+#client-chat{
+    width: 60%;
+    word-wrap: break-word;
+    background-color: #77b3d4c7;
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin: 10px 0;
+}
+
+#successAlert{
+    width: 80%;
+    word-wrap: break-word;
+    background-color: #4ce600;
+    padding: 7px 10px;
+    border-radius: 10px 10px 0 10px;
+    margin: 5px 0 5px auto;
+}

@@ -1,27 +1,10 @@
-//// Initialize and add the map : Une fonction rédigée en "JavaScript"
-//function initMap(lat, lng) {
-//    // The location of Paris
-//    let position = { lat: lat, lng: lng};
-//    // The map, centered at Paris
-//    const map = new google.maps.Map(document.getElementById("map"), {
-//      zoom: 7,
-//      center: position
-//    });
-//    // The marker, positioned at Paris
-//    const marker = new google.maps.Marker({
-//      position: position,
-//      map: map,
-//    });
-//};
-
-$(document).ready(function() {
-
-function initMap(lat, lng) {
+// Initialize and add the map : Une fonction rédigée en "JavaScript"
+function initMap(latitude, longitude) {
     // The location of Paris
-    let position = { lat: lat, lng: lng};
+    const position = { lat: latitude, lng: longitude};
     // The map, centered at Paris
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 7,
+      zoom: 11,
       center: position
     });
     // The marker, positioned at Paris
@@ -30,6 +13,8 @@ function initMap(lat, lng) {
       map: map,
     });
 };
+
+$(document).ready(function() {
 	$('form').on('submit', function(event) {
         event.preventDefault();
         $.ajax({
@@ -37,15 +22,22 @@ function initMap(lat, lng) {
 				input : $('#nameInput').val(),
 			},
 			type : 'POST',
-			url : 'http://127.0.0.1:5000/exemple'
+			url : 'http://127.0.0.1:5000/bob'
 		})
 		.done(function(data) {
-		    console.log(data)
+		    let latitude = parseFloat(data["latitude"])
+		    let longitude = parseFloat(data["longitude"])
+		    initMap(latitude, longitude)
+//		    console.log(data["longitude"])
 		});
 	});
 });
 
 
+
+const myDiv = document.getElementById('my-div');
+
+myDiv.innerHTML = 'Hey my name is <strong>Dom</strong>';
 //export class Map {
 //  constructor() {
 //    this.place = {};
@@ -73,3 +65,4 @@ function initMap(lat, lng) {
 //}
 
 //
+

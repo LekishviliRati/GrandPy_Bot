@@ -14,14 +14,14 @@ $(document).ready(function() {
 // Càd : instance_wiki_description
 			if (data.error) {
 				$('#errorAlert').text(data.error).show();
-				$('#successAlert').hide();
+				$('#papyChat').hide();
 			}
 			else {
-//			    const map = new Map(data.latitude, data.longitude);
 			    let old_text = $('#successAlert').text() + "<br>"
-			    let new_text = old_text + data.description
-// new_text permet de ne pas perdre l'historique des question,
-// sauf si rechargement de la page.
+			    let new_text = old_text +
+			    "Titre : " + data.title + "<br>" + "<br>" +
+			    "Description: " + data.description + "<br>" + "<br>" +
+			    "url: " + data.url
 			    $('#successAlert').html(new_text).show();
 				$('#errorAlert').hide();
 			}
