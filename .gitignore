@@ -1,4 +1,4 @@
 env/
 .env
 .flaskenv
-__pychache__/
+__pycache__/
