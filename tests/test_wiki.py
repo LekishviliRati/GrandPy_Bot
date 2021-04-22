@@ -1,7 +1,7 @@
 """Test of wiki.py """
 
 import requests
-from API.wiki import wiki_request
+from application.wiki import wiki_request
 from configuration import wiki_test_lng, wiki_test_lat
 
 
@@ -48,7 +48,8 @@ def test_of_get_description_from_wiki_info_success(monkeypatch):
     # Apply the monkeypatch for requests.get to mock_get_coordinates
     monkeypatch.setattr(requests, 'get', mock_get_wiki_infos)
     instance_of_wiki_request = wiki_request()
-    test_request = instance_of_wiki_request.get_wiki_info(wiki_test_lat, wiki_test_lng)
+    test_request = \
+        instance_of_wiki_request.get_wiki_info(wiki_test_lat, wiki_test_lng)
     assert test_request == expected_response
 
 
