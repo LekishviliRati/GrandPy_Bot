@@ -7,7 +7,10 @@ from configuration import wiki_url
 
 
 class wiki_request:
-    """Comment."""
+    """
+    This class will return a dictionary : wiki_info,
+    from wikimedia with given coordinates (lat/lng).
+    """
     def __init__(self, latitude, longitude):
         self.get_wiki_info(latitude, longitude)
 

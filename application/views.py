@@ -9,6 +9,12 @@ from application.maps import map_request
 from application.wiki import wiki_request
 
 
+@app.route("/")  # view function with route URL
+@cross_origin(origin="*")
+def hello_world():
+    return render_template("index.html")
+
+
 @app.route('/process', methods=['get', 'post'])
 @cross_origin(origin="*")
 def index():
@@ -42,4 +48,4 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html")
+    return render_template("404.html"), 404

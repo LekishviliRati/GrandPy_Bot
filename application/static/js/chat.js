@@ -1,26 +1,5 @@
 // Management of all JS script.
 
-//class MapInit {
-//    constructor(latitude, longitude) {
-//        this.latitude = latitude;
-//        this.longitude = longitude;
-//    }
-//
-//    initMap() {
-//    // The location of Paris
-//    const position = { lat: this.latitude, lng: this.longitude};
-//    const map = new google.maps.Map(document.getElementById("map"), {
-//      zoom: 11,
-//      center: position
-//    });
-//    // The marker, positioned at Paris
-//    const marker = new google.maps.Marker({
-//      position: position,
-//      map: map,
-//    });
-//  };
-//}
-
 // Function to initialise map
 function initMap(latitude, longitude) {
     // The location of Paris
@@ -36,6 +15,15 @@ function initMap(latitude, longitude) {
     });
 };
 
+function escapeHtml(text) {
+  return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+}
+
 //
 $(document).ready(function() {
 	$('form').on('submit', function(event) {
@@ -44,13 +32,13 @@ $(document).ready(function() {
 
     //get message
     let getMessage = $('input').val();
-
+    let text = escapeHtml(getMessage)
 
     // if message not empty
-    if(getMessage !== '') {
+    if(text !== '') {
 
-      //prepare message
-      let newMessage = "<p class='message'>" + getMessage + " </p>";
+            //prepare message
+      let newMessage = "<p class='message'>" + text + " </p>";
 
       // append the message to box
       $('.box .inner').append(newMessage);
@@ -96,7 +84,6 @@ $(document).ready(function() {
                     let latitude = parseFloat(map["latitude"])
                     let longitude = parseFloat(map["longitude"])
                     initMap(latitude, longitude)
-//                    MapInit(latitude, longitude)
                     $("#loader").hide();
             }
         });
