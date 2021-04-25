@@ -1,5 +1,6 @@
 """
-Parse user input, to look for an adress.
+Parse user input to get cleaner request for
+Google Places API.
 """
 from unidecode import unidecode
 
@@ -7,7 +8,7 @@ from configuration.globals import STOPWORDS, PUNCTUATION
 
 
 class Input_parser:
-    """Represents the parser."""
+    """This class will return parsed input."""
 
     def __init__(self, user_input):
         self.user_input = user_input

@@ -3,3 +3,5 @@ flake8
 unicode
 requests
 pytest
+flask_cors
+python-decouple

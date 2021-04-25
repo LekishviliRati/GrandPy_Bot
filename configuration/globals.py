@@ -1,23 +1,25 @@
 # -*- coding: utf-8 -*-
 """Configuration file."""
 
-import os
-
-API_KEY = os.environ.get('API_KEY')
+from decouple import config
 
 """
-Wikimedia 
+Google Maps.
+"""
+API_KEY = config('API_KEY')
+
+"""
+Wikimedia.
 """
 wiki_url = "https://fr.wikipedia.org/w/api.php?"
 # Lat | Lng of Roma
-wiki_test_lng = 12.4942
+wiki_test_lg = 12.4942
 wiki_test_lat = 41.8905
 
-
-""" 
-Input_parser
 """
-PUNCTUATION = ["'", '"', ",", ".", "!", ":", ";", "?", "-"]
+Input Parser.
+"""
+PUNCTUATION = ["'", '"', ",", ".", "!", ":", ";", "?", "-", ">", "<"]
 
 """
 Link to use for stop words in french language :
@@ -634,4 +636,9 @@ STOPWORDS = [
     "été",
     "être",
     "ô",
+    "<script>",
+    "</script>",
+    "alert",
+    "<IMG",
+    ">",
 ]

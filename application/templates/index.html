@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <script src="../static/js/chat.js"></script>
+    <title> GrandPy 👴🏼 </title>
+</head>
+
+<body>
+    <header id="header">
+      <img src="../static/img/papy_robot.png" alt="papy robot logo" class="papy_image">
+      <h1 class="element2"> <em> Papy Robot </em><br> Très fort en Géographie ! </h1>
+    </header>
+
+
+    <div class="container"> <br>
+        <form>
+          <div>
+              <strong> Dis-moi tout ! Papy t'écoute attentivement 👴🏼: </strong>
+          </div>
+          <p> <input type="text" name="input" placeholder="texte ..." id="nameInput"> </p>
+          <button type="submit" class="button">
+              <div class="add"> Rechercher 🧐</div>
+              <div id="loader">
+                  <img src="../static/img/ajax-loader.gif">
+              </div>
+          </button>
+        </form> <br>
+
+        <div class="box">
+            <div class="inner">
+          <!--  messages -->
+            <div id="successAlert" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <footer>
+      <div>
+        <h2> Rati Lekishvili (DA Python) </h2>
+        <ul id="footer_list">
+          <li class="element 1"><a href="https://www.facebook.com" title="Ajouter moi sur FACEBOOK !" target="_blank"> FACEBOOK </a></li>
+          <li class="element 2"><a href="https://github.com/LekishviliRati" title="Suis-moi sur GITHUB !" target="_blank"> GITHUB</a></li>
+          <li class="element 3"><a href="https://www.linkedin.com/in/rati-lekishvili-76a543111/" title="Mon Linked In" target="_blank">LINKED IN</a></li>
+        </ul>
+  		</div>
+    </footer>
+
+      <!-- Add GOOGLE MAPS -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0lfgQAaH7B2RCC6VOZbLr8REwvTo7i9g&callback=initMap&libraries=&v=weekly"
+      async
+    >
+    </script>
+
+</body>
+</html>
+
